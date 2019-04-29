@@ -10,6 +10,7 @@ foto
 *.jpg
 *.png
 *.jpeg
+*.img
 
 # Runtime data
 pids
