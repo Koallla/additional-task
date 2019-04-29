@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 1583px;
+    margin: 0 auto;
+    padding: 90px 141px;
+    background: rgb(172, 164, 164);
+    height: 100vh;
+}
+
+.page-list {
+    list-style: none;
+    font-size: 0;
+    display: block;
+    /* border: 1px solid #000; */
+}
+
+.page-list-item img{
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border: 5px solid #ccc;
+    float: left;
+    margin: 15px;
+    -webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out;
+
+}
+
+.page-list-item:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.page-list-item img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0,0,0,.8);
+    
+
+
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+.box {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.type-box {
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    float: left;
+    border-radius: 10px;
+    padding: 40px 15px;
+    
+}
+
+p {
+    font-size: 25px;
+    color: #0E1116;
+}
+
+
+.type-box:nth-child(3n+1) { /*1,4,7...*/
+    background: #88292F;
+}
+
+.type-box:nth-child(3n+2) { /*2,5,8...*/
+    background: #DB7DE6;
+}
+
+.type-box:nth-child(3n+3) { /*Каждый 3-ий*/
+    margin-right: 0;
+    background: #0D5D56;
+}
+
+
+.wrapper {
+    width: 1000px;
+    background: #bbb;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.list-item::before {
+    content: "\2192";
+}
+
+/*-------------------------------------*/
+
+.list-marker {
+    counter-reset: count-box;
+}
+
+.list-marker {
+    background: #aaa;
+    text-align: center;
+    width: 1300px;
+    margin: 0 auto;
+}
+h3 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.list-marker-item {
+    font-size: 30px;
+    line-height: 70px;
+    counter-increment: count-box;
+}
+
+.list-marker-item::before {
+    content: '';
+    display: inline-block;
+    height: 40px;
+    width: 45px;
+    padding: 5px 5px;
+    background: #1dc0c0;
+    content: counter(count-box, upper-roman);/*вывести счётчик римские цифры*/
+    font-size: 40px;
+
+
+    margin-right: 55px;
+    border: 1px solid #fff;
+    vertical-align: middle;
+}
